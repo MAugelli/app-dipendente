@@ -1,38 +1,59 @@
 <div class="container">
+  <form [formGroup]="form" (submit)="onSubmit()">
+    <div class="form-container">
+      <div class="form-group">
+        <label for="nome">Nome</label><br />
+        <input
+          type="text"
+          name="nome"
+          class="form-control"
+          formControlName="nome"
+        />
+      </div>
 
-    <form [formGroup]="form" (submit)="onSubmit()">
+      <div class="form-group">
+        <label for="cognome">Cognome</label><br />
+        <input
+          type="text"
+          name="cognome"
+          class="form-control"
+          formControlName="cognome"
+        />
+      </div>
+    </div>
 
-        <div class="form-group">
+    <div class="form-container">
+      <div class="form-group">
+        <label for="nascita">Data Di Nascita</label><br />
+        <input
+          type="date"
+          name="nascita"
+          class="form-control"
+          formControlName="nascita"
+        />
+      </div>
 
-            <label for="nome">Nome</label><br>
-            <input type="text" name="nome" class="form-control" formControlName = "nome">
+      <div class="form-group">
+        <label for="email">Email</label><br />
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          formControlName="email"
+        />
+      </div>
+    </div>
 
-        </div>
-
-        <div class="form-group">
-
-            <label for="cognome">Cognome</label><br>
-            <input type="text" name="cognome" class="form-control" formControlName = "cognome">
-   
-        </div>
-
-        <div class="form-group">
-
-            <label for="email">Email</label><br>
-            <input type="email" name="email" class="form-control" formControlName = "email">
-  
-        </div>
-
-        <div class="form-group">
-
-            <label for="nascita">Data Di Nascita</label><br>
-            <input type="date" name="nascita" class="form-control" formControlName = "nascita">
-   
-        </div>
-
-        <button class="btn btn-primary" type="submit">Aggiungi</button>
-        <button class="btn btn-primary" type="reset">Reset</button>
-
-    </form>
-
+    <div class="button-container">
+      <button
+        class="btn btn-warning text-white border-primary me-3"
+        type="reset"
+      >
+        Reset
+      </button>
+      <button class="btn btn-primary border-primary" type="submit">
+        Aggiungi
+      </button>
+    </div>
+  </form>
 </div>
