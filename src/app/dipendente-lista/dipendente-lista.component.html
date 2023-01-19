@@ -1,5 +1,15 @@
-<app-dipendete-aggiungi (outputNuovo)="onNuovo($event)"></app-dipendete-aggiungi>
+<app-dipendete-aggiungi
+  (outputNuovo)="onNuovo($event)"
+></app-dipendete-aggiungi>
 <ul>
-    <li *ngFor="let item of items">{{item.getNomeCompleto()}}</li>
+  <div>
+    <label>ID</label>
+    <li *ngFor="let item of items">
+      <button>{{ item.getId() }}</button>
+    </li>
+  </div>
+  <div>
+    <label>Email</label>
+    <li *ngFor="let item of items">{{ item.getEmail() }}</li>
+  </div>
 </ul>
-
