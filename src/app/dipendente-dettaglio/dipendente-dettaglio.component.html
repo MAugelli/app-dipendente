@@ -1,1 +1,5 @@
-<p>dipendente-dettaglio works!</p>
+<button (click)="show = !show">{{data.getId()}}</button>
+<div *ngIf="show">>
+    <p >{{data.getNomeCompleto()}}</p>
+    <p >{{data.getNascita()}}</p>
+</div>

@@ -8,8 +8,11 @@ import { Dipendente } from '../dipendente';
 })
 export class DipendenteDettaglioComponent {
 
-  @Input() data:Dipendente[]=[]
-
+  @Input() data:Dipendente = new Dipendente (0,"","","",new Date())
+  show=false
   
+  onShow(){
+    this.show = true;
+  }
 
 }
