@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Dipendente } from '../dipendente';
 
 @Component({
   selector: 'app-dipendente-dettaglio',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./dipendente-dettaglio.component.css']
 })
 export class DipendenteDettaglioComponent {
+
+  @Input() data:Dipendente[]=[]
+
+  
 
 }
