@@ -1,16 +1,18 @@
-<app-dipendete-aggiungi
-  (outputNuovo)="onNuovo($event)"
-></app-dipendete-aggiungi>
-<ul>
-  <div>
-    <label>ID</label>
-    <li *ngFor="let item of items">
-      <!-- <button>{{ item.getId() }}</button> -->
-      <app-dipendente-dettaglio [data]="item" ></app-dipendente-dettaglio>
-    </li>
-  </div>
-  <div>
-    <label>Email</label>
-    <li *ngFor="let item of items">{{ item.getEmail() }}</li>
-  </div>
-</ul>
+<app-dipendete-aggiungi (outputNuovo)="onNuovo($event)"></app-dipendete-aggiungi>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <th scope="row" >
+        <app-dipendente-dettaglio [data]="item"></app-dipendente-dettaglio>
+      </th>
+      <th scope="row" >
+        {{ item.getEmail() }}
+      </th>
+    </tr>
+</table>

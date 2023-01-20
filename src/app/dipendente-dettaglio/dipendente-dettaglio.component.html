@@ -1,5 +1,9 @@
 <button (click)="show = !show">{{data.getId()}}</button>
-<div *ngIf="show">>
-    <p >{{data.getNomeCompleto()}}</p>
-    <p >{{data.getNascita()}}</p>
+<div class="card position-absolute bottom-50 end-0" style="width: 18rem;" *ngIf="show">
+    <div class="card-body " >
+            <h5 class="card-title">Nome completo:</h5>
+            <p class="card-text">{{data.getNomeCompleto()}}</p>
+            <h5 class="card-title">Email:</h5>
+            <p class="card-text">{{data.getNascita()}}</p>
+    </div>
 </div>

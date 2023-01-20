@@ -10,7 +10,6 @@ export class DipendenteListaComponent {
   
   items:Dipendente[] = []
 
-
   onNuovo(v:Dipendente){
     this.items.push(v)
   }
